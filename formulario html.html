@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía práctica para evaluar el dolor</title>
+    <link rel="stylesheet" href="formulario css.css">
+</head>
+<body>
+    <div class="contenido">
+        <h1>Guía práctica para<br> 
+            Evaluar el dolor</h1>
+        <div id="error-message" style="color: red;"></div>
+        <form id="dynamicForm">
+            <!-- Pregunta 1 -->
+            <div id="pregunta1" class="pregunta">
+                <label for="pregunta1Input">¿Qué edad tiene su paciente?</label>
+                <select id="pregunta1Input" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="prematuro">Prematuro - Recién nacido</option>
+                    <option value="menos_de_3">Menos de 3 meses - 12 años</option>
+                    <option value="mas_de_3">Más de 3 años</option>
+                    <option value="mas_de_5">Más de 5 años</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div id="pregunta2" class="pregunta escondida">
+                <label for="pregunta2Input">¿Su paciente tiene alguna alteración cognitiva, demencia o Alzheimer?</label>
+                <select id="pregunta2Input" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div id="pregunta3" class="pregunta escondida">
+                <label for="pregunta3Input">¿Cuál es el nivel de apoyo necesario?</label>
+                <input type="text" id="pregunta3Input" placeholder="Escribe tu respuesta aquí" required>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="botones">
+                <button type="button" id="anteriorBtn" class="escondida">Anterior</button>
+                <button type="button" id="siguienteBtn" disabled>Siguiente</button>
+            </div>
+
+            <!-- Botón de enviar -->
+            <button type="submit" id="enviarBtn" class="escondida">Enviar</button>
+        </form>
+    </div>
+    <script src="formulario js.js"></script>
+</body>
+</html>
