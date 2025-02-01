@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCALA CPOT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CPOT.CSS">
+</head>
+<body>
+    <div class="container">
+        <div class="titulo-con-imagen">
+        <img src="1d2a565d-bd81-440b-beb8-8b2abf233412.jpg" alt="corazon" class="logo" style="width: 100px; height: auto; position: absolute; top: 10px; left: 20px;">
+        <h1>ESCALA CPOT</h1>
+        </div>
+        <form id="dynamicForm">
+    <script src="CPOT.js"></script> <!-- Asegúrate de que la ruta sea correcta -->
+            <!-- Pregunta 1 -->
+            <div id="pregunta1" class="pregunta">
+                <label for="expresionInput">¿Cómo es la expresión facial de su paciente?</label>
+                <div class="opciones-container">
+                    <div class="opcion izquierda">
+                        <input type="radio" id="expresion1" name="expresion" value="relajado" data-puntos="0" required>
+                        <label for="expresion1" class="circulo">Relajado</label>
+                    </div>
+                    <div class="opcion centro">
+                        <input type="radio" id="expresion2" name="expresion" value="tengo" data-puntos="1">
+                        <label for="expresion2" class="circulo">Tenso</label>
+                    </div>
+                    <div class="opcion derecha">
+                        <input type="radio" id="expresion3" name="expresion" value="mueca" data-puntos="2">
+                        <label for="expresion3" class="circulo">Mueca de dolor</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div id="pregunta2" class="pregunta escondida">
+                <label for="movimientosInput">¿Cómo son los movimientos de los miembros del paciente?</label>
+                <div class="opciones-container">
+                    <div class="opcion izquierda">
+                        <input type="radio" id="movimiento1" name="movimientos" value="no_realiza" data-puntos="0" required>
+                        <label for="movimiento1" class="circulo">No realiza movimientos</label>
+                    </div>
+                    <div class="opcion centro">
+                        <input type="radio" id="movimiento2" name="movimientos" value="proteccion" data-puntos="1">
+                        <label for="movimiento2" class="circulo">Movimientos de protección</label>
+                    </div>
+                    <div class="opcion derecha">
+                        <input type="radio" id="movimiento3" name="movimientos" value="agitacion" data-puntos="2">
+                        <label for="movimiento3" class="circulo">Agitación</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div id="pregunta3" class="pregunta escondida">
+                <label for="tensionInput">¿Cómo está la tensión muscular de su paciente?</label>
+                <div class="opciones-container">
+                    <div class="opcion izquierda">
+                        <input type="radio" id="tension1" name="tension" value="relajado" data-puntos="0" required>
+                        <label for="tension1" class="circulo">Relajado</label>
+                    </div>
+                    <div class="opcion centro">
+                        <input type="radio" id="tension2" name="tension" value="tenso" data-puntos="1">
+                        <label for="tension2" class="circulo">Tenso</label>
+                    </div>
+                    <div class="opcion derecha">
+                        <input type="radio" id="tension3" name="tension" value="muy_tenso" data-puntos="2">
+                        <label for="tension3" class="circulo">Muy tenso o rígido</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advertencia sobre el estado del paciente -->
+            <div id="advertencia" class="pregunta escondida">
+                <h2 class="titulo-importante">¡IMPORTANTE!</h2>
+                <p>Su paciente está:</p>
+                <div class="opciones-container">
+                    <div class="opcion izquierda">
+                        <input type="radio" id="intubado" name="estado" value="intubado" required>
+                        <label for="intubado" class="circulo">Intubado</label>
+                    </div>
+                    <div class="opcion derecha">
+                        <input type="radio" id="extubado" name="estado" value="extubado">
+                        <label for="extubado" class="circulo">Extubado</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta para pacientes intubados -->
+            <div id="preguntaIntubado" class="pregunta escondida">
+                <label for="adaptacionVentiladorInput">¿Cómo está la adaptación al ventilador?</label>
+                <div class="opciones-container">
+                    <div class="opcion izquierda">
+                        <input type="radio" id="adaptacionVentilador1" name="adaptacionVentilador" value="bien_adaptado" data-puntos="0" required>
+                        <label for="adaptacionVentilador1" class="circulo">Bien adaptado al ventilador</label>
+                    </div>
+                    <div class="opcion centro">
+                        <input type="radio" id="adaptacionVentilador2" name="adaptacionVentilador" value="tose_pero_se_adapta" data-puntos="1">
+                        <label for="adaptacionVentilador2" class="circulo">Tose pero se adapta</label>
+                    </div>
+                    <div class="opcion derecha">
+                        <input type="radio" id="adaptacionVentilador3" name="adaptacionVentilador" value="lucha_con_el_ventilador" data-puntos="2">
+                        <label for="adaptacionVentilador3" class="circulo">Lucha con el ventilador</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta para pacientes extubados -->
+            <div id="preguntaExtubado" class="pregunta escondida">
+                <label for="vocalizacionInput">¿Cómo es la vocalización de su paciente?</label>
+                <div class="opciones-container">
+                    <div class="opcion izquierda">
+                        <input type="radio" id="vocalizacion1" name="vocalizacion" value="habla_con_tono_normal" data-puntos="0" required>
+                        <label for="vocalizacion1" class="circulo">Habla con tono normal o no habla</label>
+                    </div>
+                    <div class="opcion centro">
+                        <input type="radio" id="vocalizacion2" name="vocalizacion" value="suspiros_gemidos" data-puntos="1">
+                        <label for="vocalizacion2" class="circulo">Suspiros, gemidos</label>
+                    </div>
+                    <div class="opcion derecha">
+                        <input type="radio" id="vocalizacion3" name="vocalizacion" value="gritos_sollozos" data-puntos="2">
+                        <label for="vocalizacion3" class="circulo">Gritos, sollozos</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="botones">
+                <button type="button" id="anteriorBtn" class="escondida">Anterior</button>
+                <button type="button" id="siguienteBtn" disabled>Siguiente</button>
+            </div>
+        </form>
+
+   <!-- Sección de Resultados -->
+<div id="resultado" class="escondida">
+    <h2 class="titulo-importante" id="resultadoTexto"></h2>
+    <p id="mensajeResultado" class="mensaje"></p> <!-- Mensaje del resultado -->
+    <button id="reiniciarBtn">Reiniciar</button>
+</div>
+    </div>
+    <script src="CPOT.JS"></script>
+</body>
+</html>
