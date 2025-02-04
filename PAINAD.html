@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCALA PAINAD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="PAINAD.CSS">
+</head>
+<body>
+    <div class="container">
+        <div class="titulo-con-imagen">
+            <img src="1d2a565d-bd81-440b-beb8-8b2abf233412-removebg-preview.png" alt="corazon" class="logo" style="width: 100px; height: auto; position: absolute; top: 10px; left: 20px;">
+            <h1>ESCALA PAINAD</h1>
+        </div>
+        <form id="dynamicForm">
+            <!-- Pregunta 1 -->
+            <div id="pregunta1" class="pregunta">
+                <label for="respiracionInput">¿Cómo es la respiración de su paciente? (independientemente de su vocalización)</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <img src="Respiración normal.jpg" alt="Normal" class="imagen-opcion">
+                        <input type="radio" id="respiracion1" name="respiracion" value="normal" data-puntos="0" required>
+                        <label for="respiracion1">Normal</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="Respiración normal (0).jpg" alt="Respiración laboriosa" class="imagen-opcion">
+                        <input type="radio" id="respiracion2" name="respiracion" value="laboriosa" data-puntos="1">
+                        <label for="respiracion2">Respiración laboriosa, esporádica, cortos periodos de hiperventilación</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="respiracion ruidosa.jpg" alt="Respiración ruidosa" class="imagen-opcion">
+                        <input type="radio" id="respiracion3" name="respiracion" value="ruidosa" data-puntos="2">
+                        <label for="respiracion3">Respiración laboriosa y ruidosa, cortos periodos de hiperventilación, respiración de Cheyne-Stokes</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div id="pregunta2" class="pregunta escondida">
+                <label for="vocalizacionInput">¿Su paciente presenta vocalización negativa?</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <img src="Vocalización ninguna (0).jpg" alt="Ninguna" class="imagen-opcion">
+                        <input type="radio" id="vocalizacion1" name="vocalizacion" value="ninguna" data-puntos="0" required>
+                        <label for="vocalizacion1">Ninguna</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="Vocalización gemidos (1).jpg" alt="Gemidos o lamentos" class="imagen-opcion">
+                        <input type="radio" id="vocalizacion2" name="vocalizacion" value="gemidos" data-puntos="1">
+                        <label for="vocalizacion2">Gemidos o lamentos esporádicos, habla con volumen bajo o desaprobación</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="Vocalización llanto (2).jpg" alt="Llamadas agitadas" class="imagen-opcion">
+                        <input type="radio" id="vocalizacion3" name="vocalizacion" value="llamadas" data-puntos="2">
+                        <label for="vocalizacion3">Llamadas agitadas o repetitivas, gemidos o lamentos con volumen alto, llanto</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div id="pregunta3" class="pregunta escondida">
+                <label for="expresionInput">¿Cómo es la expresión facial de su paciente?</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <img src="Expresión sonriente (0).jpg" alt="Sonriente o inexpresiva" class="imagen-opcion">
+                        <input type="radio" id="expresion1" name="expresion" value="sonriente" data-puntos="0" required>
+                        <label for="expresion1">Sonriente o inexpresiva</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="Expresión triste (1).jpg" alt="Triste o asustada" class="imagen-opcion">
+                        <input type="radio" id="expresion2" name="expresion" value="triste" data-puntos="1">
+                        <label for="expresion2">Triste, asustada o ceñuda</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="Expresión muecas (2).jpg" alt="Muecas de disgusto" class="imagen-opcion">
+                        <input type="radio" id="expresion3" name="expresion" value="muecas" data-puntos="2">
+                        <label for="expresion3">Muecas de disgusto o desaprobación</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div id="pregunta4" class="pregunta escondida">
+                <label for="lenguajeInput">¿Cómo es el lenguaje corporal de su paciente?</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <img src="Lenguaje corporal relajado (0).jpg" alt="Relajado" class="imagen-opcion">
+                        <input type="radio" id="lenguaje1" name="lenguaje" value="relajado" data-puntos="0" required>
+                        <label for="lenguaje1">Relajado</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="Lenguaje corporal tenso (1).jpg" alt="Tenso" class="imagen-opcion">
+                        <input type="radio" id="lenguaje2" name="lenguaje" value="tenso" data-puntos="1">
+                        <label for="lenguaje2">Tenso, anda de un lado para otro, no deja de mover las manos</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="Lenguaje corporal rígido (2).jpg" alt="Rígido" class="imagen-opcion">
+                        <input type="radio" id="lenguaje3" name="lenguaje" value="rigido" data-puntos="2">
+                        <label for="lenguaje3">Rígido, puños cerrados, rodillas flexionadas, agarra/empuja, agresividad física</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div id="pregunta5" class="pregunta escondida">
+                <label for="alivioInput">¿Cómo está la capacidad de alivio de su paciente?</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <img src="No necesita alivio (0).jpg" alt="No necesita alivio" class="imagen-opcion">
+                        <input type="radio" id="alivio1" name="alivio" value="no_necesita" data-puntos="0" required>
+                        <label for="alivio1">No necesita alivio</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="Se distrae (1).jpg" alt="Se distrae" class="imagen-opcion">
+                        <input type="radio" id="alivio2" name="alivio" value="se_distrae" data-puntos="1">
+                        <label for="alivio2">Se distrae o tranquiliza por la voz o el contacto</label>
+                    </div>
+                    <div class="opcion">
+                        <img src="No se alivia (2).jpg" alt="No es posible aliviarlo" class="imagen-opcion">
+                        <input type="radio" id="alivio3" name="alivio" value="no_posible" data-puntos="2">
+                        <label for="alivio3">No es posible aliviarlo, distraerlo o tranquilizarlo</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="botones">
+                <button type="button" id="anteriorBtn" class="escondida">Anterior</button>
+                <button type="button" id="siguienteBtn" disabled>Siguiente</button>
+            </div>
+        </form>
+
+        <!-- Sección de Resultados -->
+        <div id="resultado" class="escondida">
+            <h2 class="titulo-importante" id="resultadoTexto"></h2>
+            <p id="mensajeResultado" class="mensaje"></p> <!-- Mensaje del resultado -->
+            <button id="reiniciarBtn">Reiniciar</button>
+        </div>
+    </div>
+    <script src="PAINAD.JS"></script>
+</body>
+</html>
