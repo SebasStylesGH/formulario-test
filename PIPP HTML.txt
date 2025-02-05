@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCALA PIPP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="PIPP.CSS">
+</head>
+<body>
+    <div class="container">
+        <div class="titulo-con-imagen">
+            <h1>ESCALA PIPP</h1>
+        </div>
+        <form id="dynamicForm">
+            <!-- Pregunta 1 -->
+            <div id="pregunta1" class="pregunta">
+                <label for="edadGestacionalInput">¿Cuál es la edad gestacional de su paciente?</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <input type="radio" id="edadGestacional1" name="edadGestacional" value="mas_de_36_semanas" data-puntos="0" required>
+                        <label for="edadGestacional1">≥36 semanas (más de 36 semanas)</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="edadGestacional2" name="edadGestacional" value="32_a_36_semanas" data-puntos="1">
+                        <label for="edadGestacional2">32 a 36 semanas</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="edadGestacional3" name="edadGestacional" value="28_a_32_semanas" data-puntos="2">
+                        <label for="edadGestacional3">28 a 32 semanas</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="edadGestacional4" name="edadGestacional" value="menos_de_28_semanas" data-puntos="3">
+                        <label for="edadGestacional4">≤28 semanas (menos de 28 semanas)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div id="pregunta2" class="pregunta escondida">
+                <label for="comportamientoInput">¿Cómo es el comportamiento de su paciente? (compare en estado basal y 15 segundos después del procedimiento doloroso)</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <input type="radio" id="comportamiento1" name="comportamiento" value="despierto_activo" data-puntos="0" required>
+                        <label for="comportamiento1">Despierto y activo (ojos abiertos con movimientos faciales)</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="comportamiento2" name="comportamiento" value="despierto_inactivo" data-puntos="1">
+                        <label for="comportamiento2">Despierto e inactivo (ojos abiertos sin movimientos faciales)</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="comportamiento3" name="comportamiento" value="dormido_activo" data-puntos="2">
+                        <label for="comportamiento3">Dormido y activo (ojos cerrados con movimientos faciales)</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="comportamiento4" name="comportamiento" value="dormido_inactivo" data-puntos="3">
+                        <label for="comportamiento4">Dormido e inactivo (ojos cerrados sin movimientos faciales)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div id="pregunta3" class="pregunta escondida">
+                <label for="frecuenciaCardiacaInput">¿En cuánto aumentó la frecuencia cardiaca de su paciente? (compare en estado basal y 30 segundos después del procedimiento doloroso)</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <input type="radio" id="frecuenciaCardiaca1" name="frecuenciaCardiaca" value="0_4_lpm" data-puntos="0" required>
+                        <label for="frecuenciaCardiaca1">0-4 lpm</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="frecuenciaCardiaca2" name="frecuenciaCardiaca" value="5_14_lpm" data-puntos="1">
+                        <label for="frecuenciaCardiaca2">5-14 lpm</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="frecuenciaCardiaca3" name="frecuenciaCardiaca" value="15_24_lpm" data-puntos="2">
+                        <label for="frecuenciaCardiaca3">15-24 lpm</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="frecuenciaCardiaca4" name="frecuenciaCardiaca" value="mas_de_25_lpm" data-puntos="3">
+                        <label for="frecuenciaCardiaca4">≥25 lpm (más de 25 lpm)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div id="pregunta4" class="pregunta escondida">
+                <label for="sato2Input">¿En cuánto disminuyó la SATO₂ de su paciente? (compare en estado basal y 30 segundos después del procedimiento doloroso)</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <input type="radio" id="sato21" name="sato2" value="0_2_4" data-puntos="0" required>
+                        <label for="sato21">0-2,4%</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="sato22" name="sato2" value="2_5_4_9" data-puntos="1">
+                        <label for="sato22">2,5-4,9%</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="sato23" name="sato2" value="5_7_4" data-puntos="2">
+                        <label for="sato23">5-7,4%</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="sato24" name="sato2" value="mas_de_7_5" data-puntos="3">
+                        <label for="sato24">≥7,5%</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div id="pregunta5" class="pregunta escondida">
+                <label for="entrecejoInput">¿Cuánto tiempo dura el entrecejo funcido de su paciente? (compare en estado basal y 30 segundos después del procedimiento doloroso)</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <input type="radio" id="entrecejo1" name="entrecejo" value="0_3_segundos" data-puntos="0" required>
+                        <label for="entrecejo1">0-3 segundos</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="entrecejo2" name="entrecejo" value="3_12_segundos" data-puntos="1">
+                        <label for="entrecejo2">3-12 segundos</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="entrecejo3" name="entrecejo" value="12_21_segundos" data-puntos="2">
+                        <label for="entrecejo3">12-21 segundos</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="entrecejo4" name="entrecejo" value="mas_de_21_segundos" data-puntos="3">
+                        <label for="entrecejo4">>21 segundos (más de 21 segundos)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div id="pregunta6" class="pregunta escondida">
+                <label for="tiempoOjosInput">¿Cuánto tiempo mantiene los ojos apretados su paciente? (compare en estado basal y 30 segundos después del procedimiento doloroso)</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <input type="radio" id="tiempoOjos1" name="tiempoOjos" value="0_3_segundos" data-puntos="0" required>
+                        <label for="tiempoOjos1">0-3 segundos</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="tiempoOjos2" name="tiempoOjos" value="3_12_segundos" data-puntos="1">
+                        <label for="tiempoOjos2">3-12 segundos</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="tiempoOjos3" name="tiempoOjos" value="12_21_segundos" data-puntos="2">
+                        <label for="tiempoOjos3">12-21 segundos</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="tiempoOjos4" name="tiempoOjos" value="mas_de_21_segundos" data-puntos="3">
+                        <label for="tiempoOjos4">>21 segundos (más de 21 segundos)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div id="pregunta7" class="pregunta escondida">
+                <label for="surcoNasolabialInput">¿Cuánto tiempo se marca el surco nasolabial de su paciente? (compare en estado basal y 30 segundos después del procedimiento doloroso)</label>
+                <div class="opciones-container">
+                    <div class="opcion">
+                        <input type="radio" id="surcoNasolabial1" name="surcoNasolabial" value="0_3_segundos" data-puntos="0" required>
+                        <label for="surcoNasolabial1">0-3 segundos</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="surcoNasolabial2" name="surcoNasolabial" value="3_12_segundos" data-puntos="1">
+                        <label for="surcoNasolabial2">3-12 segundos</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="surcoNasolabial3" name="surcoNasolabial" value="12_21_segundos" data-puntos="2">
+                        <label for="surcoNasolabial3">12-21 segundos</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="surcoNasolabial4" name="surcoNasolabial" value="mas_de_21_segundos" data-puntos="3">
+                        <label for="surcoNasolabial4">>21 segundos (más de 21 segundos)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="botones">
+                <button type="button" id="anteriorBtn" class="escondida">Anterior</button>
+                <button type="button" id="siguienteBtn" disabled>Siguiente</button>
+            </div>
+        </form>
+
+        <!-- Sección de Resultados -->
+        <div id="resultado" class="escondida">
+            <h2 class="titulo-importante" id="resultadoTexto"></h2>
+            <p id="mensajeResultado" class="mensaje"></p> <!-- Mensaje del resultado -->
+            <button id="reiniciarBtn">Reiniciar</button>
+        </div>
+    </div>
+    <script src="PIPP.JS"></script>
+</body>
+</html>
