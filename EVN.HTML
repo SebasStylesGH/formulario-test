@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCALA EVN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="EVN.CSS">
+</head>
+<body>
+    <div class="container">
+        <div class="titulo-con-imagen">
+            <img src="1d2a565d-bd81-440b-beb8-8b2abf233412-removebg-preview.png" alt="corazon" class="logo" style="width: 80px; height: auto; position: absolute; top: 2px; left: 2px;">
+            <h1>ESCALA VERBAL NUMÉRICA (EVN)</h1>
+        </div>
+        <form id="dynamicForm">
+            <!-- Pregunta 1 -->
+            <div id="pregunta1" class="pregunta">
+                <h2>Indiquele a su paciente:</h2>
+                <p>Si tuviera que puntuar su dolor en una escala del 0 al 10 en la cual 0 significa <strong>NADA DE DOLOR</strong> y 10 significa <strong>EL PEOR DOLOR POSIBLE QUE PUEDA EXISTIR</strong>. <strong><u>¿En qué número ubicaría su dolor?</u></strong></p>
+                
+                <!-- Imagen debajo de la pregunta -->
+                <img src="EVN.jpg" alt="Descripción de la imagen" class="imagen-pregunta">
+
+                <div class="escala-container">
+                    <div class="escala">
+                        <input type="radio" id="nivel0" name="nivelDolor" value="0" data-puntos="0" required>
+                        <label for="nivel0">0</label>
+                        <input type="radio" id="nivel1" name="nivelDolor" value="1" data-puntos="1">
+                        <label for="nivel1">1</label>
+                        <input type="radio" id="nivel2" name="nivelDolor" value="2" data-puntos="2">
+                        <label for="nivel2">2</label>
+                        <input type="radio" id="nivel3" name="nivelDolor" value="3" data-puntos="3">
+                        <label for="nivel3">3</label>
+                        <input type="radio" id="nivel4" name="nivelDolor" value="4" data-puntos="4">
+                        <label for="nivel4">4</label>
+                        <input type="radio" id="nivel5" name="nivelDolor" value="5" data-puntos="5">
+                        <label for="nivel5">5</label>
+                        <input type="radio" id="nivel6" name="nivelDolor" value="6" data-puntos="6">
+                        <label for="nivel6">6</label>
+                        <input type="radio" id="nivel7" name="nivelDolor" value="7" data-puntos="7">
+                        <label for="nivel7">7</label>
+                        <input type="radio" id="nivel8" name="nivelDolor" value="8" data-puntos="8">
+                        <label for="nivel8">8</label>
+                        <input type="radio" id="nivel9" name="nivelDolor" value="9" data-puntos="9">
+                        <label for="nivel9">9</label>
+                        <input type="radio" id="nivel10" name="nivelDolor" value="10" data-puntos="10">
+                        <label for="nivel10">10</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="botones">
+                <button type="button" id="siguienteBtn" disabled>Siguiente</button>
+            </div>
+        </form>
+
+        <!-- Sección de Resultados -->
+        <div id="resultado" class="escondida">
+            <h2 class="titulo-importante" id="resultadoTexto"></h2>
+            <p id="mensajeResultado" class="mensaje"></p> <!-- Mensaje del resultado -->
+            <button id="reiniciarBtn">Reiniciar</button>
+        </div>
+    </div>
+    <script src="EVN.JS"></script>
+</body>
+</html>
